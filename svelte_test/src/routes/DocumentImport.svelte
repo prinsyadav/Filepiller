@@ -174,7 +174,7 @@
     <!-- Upload Step -->
     <div class="px-4">
       <Card class="mb-6">
-        <div class="bg-white rounded-lg p-4 mb-4">
+        <div class="bg-blue-200 rounded-lg p-4 mb-4">
           <div class="flex">
             <div class="mr-2">
               <svg
