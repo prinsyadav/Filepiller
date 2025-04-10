@@ -172,7 +172,7 @@
 
   {#if activeTab === 1}
     <!-- Upload Step -->
-    <div class="px-4">
+    <div class="px-4 bg-white">
       <Card class="mb-6 bg-white">
         <div class="bg-blue-200 rounded-lg p-4 mb-4">
           <div class="flex">
