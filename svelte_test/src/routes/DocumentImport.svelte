@@ -9,9 +9,28 @@
     Breadcrumb,
     BreadcrumbItem,
   } from "flowbite-svelte";
+  import { onMount } from "svelte";
+  import { navigate, useLocation } from "svelte-routing";
 
-  // Active tab
+  // Get current location to determine active tab
+  let location = useLocation();
+
+  // Default tab is upload if no specific route
   let activeTab = 1;
+
+  $: {
+    const path = $location.pathname;
+    if (path.includes("/upload")) {
+      activeTab = 1;
+    } else if (path.includes("/review")) {
+      activeTab = 2;
+    } else if (path.includes("/summary")) {
+      activeTab = 3;
+    } else if (path === "/import-documents") {
+      // Default route - redirect to upload tab
+      navigate("/import-documents/upload", { replace: true });
+    }
+  }
 
   // Document data
   let documentData = {
@@ -64,20 +83,25 @@
   }
 
   function goToNextStep() {
-    if (activeTab < 3) {
-      activeTab += 1;
+    if (activeTab === 1) {
+      navigate("/import-documents/review");
+    } else if (activeTab === 2) {
+      navigate("/import-documents/summary");
     }
   }
 
   function goToPreviousStep() {
-    if (activeTab > 1) {
-      activeTab -= 1;
+    if (activeTab === 2) {
+      navigate("/import-documents/upload");
+    } else if (activeTab === 3) {
+      navigate("/import-documents/review");
     }
   }
 
   function completeProcess() {
     // Handle completion (e.g., redirect to dashboard)
     console.log("Process completed");
+    navigate("/");
   }
 </script>
 
@@ -91,44 +115,14 @@
       </Breadcrumb>
       <h1 class="text-2xl font-bold mt-2">Import Documents</h1>
     </div>
-
-    <!-- <div>
-      <div class="flex items-center">
-        <div class="relative">
-          <Input placeholder="Quick search for anything" class="pl-10 w-64">
-            <svg slot="left" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </Input>
-        </div>
-        
-        <div class="ml-4 relative">
-          <button class="p-2 rounded-full hover:bg-gray-100" aria-label="Notifications">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-            </svg>
-          </button>
-        </div>
-        
-        <div class="ml-4">
-          <div class="h-8 w-8 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">
-            U
-          </div>
-        </div>
-        
-        <div class="ml-4">
-          <a href="/logout" class="text-blue-600 hover:underline">Logout</a>
-        </div>
-      </div>
-    </div> -->
   </div>
 
   <!-- Progress steps (Upload, Review, Summary) -->
   <div class="p-4 flex items-center mb-4">
     <div class="flex-1 flex items-center">
-      <button
+      <a
+        href="/import-documents/upload"
         class={`flex items-center ${activeTab >= 1 ? "text-blue-600" : "text-gray-500"}`}
-        on:click={() => (activeTab = 1)}
       >
         <div
           class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 1 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
@@ -136,17 +130,17 @@
           {activeTab > 1 ? "✓" : "1"}
         </div>
         Upload
-      </button>
+      </a>
       <div
         class={`h-1 flex-1 mx-2 ${activeTab >= 2 ? "bg-blue-600" : "bg-gray-200"}`}
       ></div>
     </div>
 
     <div class="flex-1 flex items-center">
-      <button
+      <a
+        href="/import-documents/review"
         class={`flex items-center ${activeTab >= 2 ? "text-blue-600" : "text-gray-500"}`}
-        on:click={() => (activeTab = 2)}
-        disabled={uploadedFiles.length === 0}
+        class:pointer-events-none={uploadedFiles.length === 0}
       >
         <div
           class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 2 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
@@ -154,17 +148,17 @@
           {activeTab > 2 ? "✓" : "2"}
         </div>
         Review
-      </button>
+      </a>
       <div
         class={`h-1 flex-1 mx-2 ${activeTab >= 3 ? "bg-blue-600" : "bg-gray-200"}`}
       ></div>
     </div>
 
     <div class="flex-1 flex items-center">
-      <button
+      <a
+        href="/import-documents/summary"
         class={`flex items-center ${activeTab >= 3 ? "text-blue-600" : "text-gray-500"}`}
-        on:click={() => (activeTab = 3)}
-        disabled={uploadedFiles.length === 0}
+        class:pointer-events-none={uploadedFiles.length === 0}
       >
         <div
           class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 3 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
@@ -172,7 +166,7 @@
           3
         </div>
         Summary
-      </button>
+      </a>
     </div>
   </div>
 

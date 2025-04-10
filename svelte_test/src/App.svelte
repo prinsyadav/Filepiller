@@ -26,6 +26,9 @@
         <Route path="/" component={Home} />
         <Route path="/onboard" component={Onboard} />
         <Route path="/import-documents" component={DocumentImport} />
+        <Route path="/import-documents/upload" component={DocumentImport} />
+        <Route path="/import-documents/review" component={DocumentImport} />
+        <Route path="/import-documents/summary" component={DocumentImport} />
         <Route path="/client-list" component={ClientList} />
         <Route path="/beta-ai" component={BetaAI} />
         <Route path="/settings" component={Settings} />
