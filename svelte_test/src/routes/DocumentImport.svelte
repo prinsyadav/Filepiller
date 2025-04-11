@@ -122,46 +122,46 @@
     <div class="flex-1 flex items-center">
       <a
         href="/import-documents/upload"
-        class={`flex items-center ${activeTab >= 1 ? "text-blue-600" : "text-gray-500"}`}
+        class={`flex items-center ${activeTab >= 1 ? "text-blue-600" : "text-white-500"}`}
       >
         <div
-          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 1 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
+          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 1 ? "bg-blue-600 text-white" : "bg-white-200 text-gray-700"}`}
         >
           {activeTab > 1 ? "✓" : "1"}
         </div>
         Upload
       </a>
       <div
-        class={`h-1 flex-1 mx-2 ${activeTab >= 2 ? "bg-blue-600" : "bg-gray-200"}`}
+        class={`h-1 flex-1 mx-2 ${activeTab >= 2 ? "bg-blue-600" : "bg-white-200"}`}
       ></div>
     </div>
 
     <div class="flex-1 flex items-center">
       <a
         href="/import-documents/review"
-        class={`flex items-center ${activeTab >= 2 ? "text-blue-600" : "text-gray-500"}`}
+        class={`flex items-center ${activeTab >= 2 ? "text-blue-600" : "text-white-500"}`}
         class:pointer-events-none={uploadedFiles.length === 0}
       >
         <div
-          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 2 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
+          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 2 ? "bg-blue-600 text-white" : "bg-white-200 text-gray-700"}`}
         >
           {activeTab > 2 ? "✓" : "2"}
         </div>
         Review
       </a>
       <div
-        class={`h-1 flex-1 mx-2 ${activeTab >= 3 ? "bg-blue-600" : "bg-gray-200"}`}
+        class={`h-1 flex-1 mx-2 ${activeTab >= 3 ? "bg-white-600" : "bg-white-200"}`}
       ></div>
     </div>
 
     <div class="flex-1 flex items-center">
       <a
         href="/import-documents/summary"
-        class={`flex items-center ${activeTab >= 3 ? "text-blue-600" : "text-gray-500"}`}
+        class={`flex items-center ${activeTab >= 3 ? "text-white-600" : "text-gray-500"}`}
         class:pointer-events-none={uploadedFiles.length === 0}
       >
         <div
-          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 3 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"}`}
+          class={`w-6 h-6 rounded-full flex items-center justify-center mr-2 ${activeTab >= 3 ? "bg-blue-600 text-white" : "bg-white-200 text-gray-700"}`}
         >
           3
         </div>
