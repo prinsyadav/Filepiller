@@ -71,7 +71,7 @@
           class="flex absolute inset-y-0 items-center text-gray-500 dark:text-gray-400 start-0 ps-2.5 pointer-events-none"
         >
           <svg
-            slot="left"
+            
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 absolute left-3 top-2.5 text-gray-500"
             fill="none"
