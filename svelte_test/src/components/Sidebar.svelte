@@ -203,7 +203,7 @@
     </ul>
   </nav> -->
 
-  <nav class="mt-auto border-t border-gray-200 py-2">
+  <nav class="mt-auto border-t border-gray-200 py-28">
     <ul>
       <li>
         <a
