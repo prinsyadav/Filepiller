@@ -1,4 +1,4 @@
-<script>
+﻿<script>
   import { Router, Route } from "svelte-routing";
   import Sidebar from "./components/Sidebar.svelte";
   import Navbar from "./components/Navbar.svelte";
