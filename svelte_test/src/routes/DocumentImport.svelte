@@ -264,7 +264,7 @@
     <div class="px-4">
       <!----><!---->
       <div
-        class="dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex w-full flex-col p-4 sm:p-6 mb-6 bg-white"
+        class="dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md flex w-full flex-col p-4 sm:p-6 mb-6 bg-white p-1rem"
       >
         <!----><!----><!---->
         <div class="bg-blue-200 rounded-lg p-4 mb-4">
@@ -306,7 +306,7 @@
           aria-label="File upload dropzone"
           class="border-2 border-dashed rounded-lg p-10 text-center border-gray-300"
         >
-          <div class="flex flex-col items-center justify-center">
+          <div class="flex flex-col items-center justify-center p-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-16 w-16 text-gray-400 mb-4"
