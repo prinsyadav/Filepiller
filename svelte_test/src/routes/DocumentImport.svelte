@@ -264,7 +264,7 @@
   {:else if activeTab === 2}
     <!-- Review Step -->
     <div class="px-4">
-      <Card>
+      <Card class="mb-6 bg-white">
         <Tabs style="underline">
           <TabItem open title="Header fields">
             <div class="p-4">
@@ -292,7 +292,7 @@
   {:else if activeTab === 3}
     <!-- Summary Step -->
     <div class="px-4">
-      <Card class="mb-6">
+      <Card class="mb-6 bg-white">
         <div class="p-4 bg-blue-100 rounded-lg mb-6">
           <p>
             To include basic company details. View more will take us to the
