@@ -182,7 +182,7 @@
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
-                ><path
+              ><path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
@@ -219,7 +219,7 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              ><path
+            ><path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
@@ -232,11 +232,10 @@
               <button
                 type="button"
                 class="text-center font-medium focus-within:ring-4 focus-within:outline-hidden inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus-within:ring-blue-300 dark:focus-within:ring-blue-800 rounded-lg"
-                ><label class="cursor-pointer"
+              ><label class="cursor-pointer"
                   >Browse File <input type="file" class="hidden" /></label
                 ></button
-              >
-            </div>
+              ></div>
           </div>
         </div>
       </div>
@@ -249,9 +248,8 @@
           type="button"
           disabled=""
           class="text-center font-medium focus-within:ring-4 focus-within:outline-hidden inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus-within:ring-blue-300 dark:focus-within:ring-blue-800 rounded-lg cursor-not-allowed opacity-50"
-          >Next: Review</button
-        >
-      </div>
+        >Next: Review</button
+        ></div>
     </div>
   {:else if activeTab === 2}
     <div class="px-4">
@@ -326,7 +324,7 @@
               </div>
               <Button color="light" size="xs">Edit</Button>
             </div>
-          </div>
+            </div>
         </div>
       {/each}
 
