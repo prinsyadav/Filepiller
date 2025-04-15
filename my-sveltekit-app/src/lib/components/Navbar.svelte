@@ -58,7 +58,7 @@
 			<div
 				class="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-red-500 font-medium text-white"
 			>
-				U
+				P
 			</div>
 			<span class="mr-3 inline-block h-6 w-px bg-gray-300"></span>
 			<a href="/logout" class="text-blue-600 hover:underline">Logout</a>

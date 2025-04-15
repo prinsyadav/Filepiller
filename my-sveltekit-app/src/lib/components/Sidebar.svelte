@@ -45,7 +45,7 @@
 </script>
 
 <div class="relative flex h-screen w-64 flex-col border-r border-gray-200 bg-white">
-	<div class="flex items-center border-b border-gray-200 p-4">
+	<div class="flex items-center border-gray-200 p-4">
 		<div class="flex items-center">
 			<img
 				src="/Filepillar_logo2 2.png"
