@@ -1,6 +1,6 @@
 <script lang="ts">
-	// You can import flowbite components like this:
-	// import { Input } from "flowbite-svelte";
+	import notificationIcon from '$lib/assets/notification.svg';
+	import searchIcon from '$lib/assets/searchIconBlue.svg';
 </script>
 
 <div class="flex items-center justify-end bg-white p-3">
@@ -8,21 +8,15 @@
 		<div class="relative mr-6 w-64">
 			<div class="relative w-auto">
 				<div
-					class="pointer-events-none absolute inset-y-0 start-0 flex items-center ps-2.5 text-gray-500 dark:text-gray-400"
+					class="ps-2.25 pointer-events-none absolute inset-y-0 start-0 flex items-center text-gray-500 dark:text-gray-400"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="absolute left-3 top-2.5 h-5 w-5 text-gray-500"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-						></path></svg
-					>
+					<img
+						src={searchIcon}
+						alt="Search"
+						class="h-[13.5px] w-[13.5px] text-blue-600"
+						style="position: relative; top: 2.25px; left: 2.25px;"
+						aria-hidden="true"
+					/>
 				</div>
 				<input
 					placeholder="Quick search for anything"
@@ -36,21 +30,13 @@
 				class="flex items-center rounded-full p-2 hover:bg-gray-100"
 				aria-label="Notifications"
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-6 w-6 text-gray-600"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
+				<img
+					src={notificationIcon}
+					alt="Notifications"
+					class="h-[25px] w-[25px] rounded-md text-[#6B7280]"
+					style="position: relative; top: 2px; left: 4px;"
 					aria-hidden="true"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-					></path>
-				</svg>
+				/>
 				<span class="ml-2">Notifications</span>
 			</button>
 		</div>
@@ -61,7 +47,12 @@
 				P
 			</div>
 			<span class="mr-3 inline-block h-6 w-px bg-gray-300"></span>
-			<a href="/logout" class="text-blue-600 hover:underline">Logout</a>
+			<a
+				href="/logout"
+				class="text-sm font-medium leading-[150%] tracking-[0%] text-[#1C64F2] hover:underline"
+			>
+				Logout
+			</a>
 		</div>
 	</div>
 </div>
