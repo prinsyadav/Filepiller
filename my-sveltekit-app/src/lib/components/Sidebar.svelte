@@ -102,7 +102,7 @@
 
 	<div class="absolute bottom-0 left-0 w-full">
 		<nav
-			class="border-t border-gray-200 py-2 text-base font-medium leading-normal tracking-normal text-gray-900"
+			class="border-gray-200 py-2 text-base font-medium leading-normal tracking-normal text-gray-900"
 		>
 			<ul>
 				{#each bottomNavItems as item}
