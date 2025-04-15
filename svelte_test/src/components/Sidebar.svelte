@@ -17,13 +17,18 @@
     { href: "/help", label: "Help", icon: "help" },
   ];
 
+  /**
+   * @param {string} path
+   */
   function handleNavigation(path) {
     console.log("Navigating to:", path);
     navigate(path);
   }
 </script>
 
-<div class="w-64 h-screen bg-white border-r border-gray-200 flex flex-col relative">
+<div
+  class="w-64 h-screen bg-white border-r border-gray-200 flex flex-col relative"
+>
   <div class="flex items-center p-4 border-b border-gray-200">
     <div class="flex items-center">
       <div class="w-8 h-8 bg-orange-500 rounded mr-2"></div>

@@ -61,3 +61,9 @@
     </div>
   </div>
 </div>
+
+<style>
+  .bg-white {
+    background-color: #ffffff;
+  }
+</style>

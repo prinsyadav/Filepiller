@@ -246,7 +246,7 @@
           role="button">Back</a
         ><button
           type="button"
-          disabled=""
+          disabled
           class="text-center font-medium focus-within:ring-4 focus-within:outline-hidden inline-flex items-center justify-center px-5 py-2.5 text-sm text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus-within:ring-blue-300 dark:focus-within:ring-blue-800 rounded-lg cursor-not-allowed opacity-50"
         >Next: Review</button
         ></div>
