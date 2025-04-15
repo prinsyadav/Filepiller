@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Button, Card, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
+	import searchIcon from '$lib/assets/searchIcon.svg';
+	import onboard from '$lib/assets/onboard.svg';
 
 	let dragActive = false;
 	let uploadedFiles: File[] = [];
@@ -41,15 +43,7 @@
 </script>
 
 <div class="h-screen bg-white p-4 md:p-6">
-	<!-- <div class="mb-6 flex items-center justify-between">
-		<div>
-			<Breadcrumb>
-				<BreadcrumbItem href="/">Onboard</BreadcrumbItem>
-				<BreadcrumbItem>Import documents</BreadcrumbItem>
-			</Breadcrumb>
-		</div>
-	</div> -->
-
+	<!-- Breadcrumb navigation -->
 	<div class="mb-6 flex items-center justify-between pl-7">
 		<div>
 			<nav aria-label="Breadcrumb">
@@ -71,39 +65,6 @@
 
 	<div class="mx-auto max-w-6xl">
 		<!-- Title and description -->
-		<!-- <div class="flex items-center px-4 py-4 sm:px-6">
-			<div class="flex items-center text-blue-600">
-				<div
-					class="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-600 text-white"
-				>
-					1
-				</div>
-				Upload
-			</div>
-
-			<div class="mx-4 h-1 flex-grow bg-gray-200"></div>
-
-			<div class="flex items-center text-gray-500">
-				<div
-					class="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 text-gray-700"
-				>
-					2
-				</div>
-				Review
-			</div>
-
-			<div class="mx-4 h-1 flex-grow bg-gray-200"></div>
-
-			<div class="flex items-center text-gray-500">
-				<div
-					class="mr-2 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 text-gray-700"
-				>
-					3
-				</div>
-				Summary
-			</div>
-		</div> -->
-
 		<div>
 			<div class="flex items-center px-4 py-4 sm:px-6">
 				<div
@@ -144,37 +105,6 @@
 
 		<!-- Upload section -->
 		<div class="mb-6 flex w-full flex-col rounded-lg px-4 py-4 sm:px-6 sm:py-6">
-			<!-- <div class="mb-4 rounded-lg bg-blue-200 p-4">
-				<div class="flex">
-					<div class="mr-2 flex-shrink-0">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6 text-blue-700"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							><path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-							></path></svg
-						>
-					</div>
-					<div>
-						<h3 class="mb-2 text-lg font-semibold">Instructions</h3>
-						<p class="text-sm">Upload the Company's SSM documents as follows:</p>
-						<ul class="mt-2 list-inside list-disc text-sm">
-							<li class="mb-1">Section 14 Superform (click here for an example: xxx)</li>
-							<li>
-								Changes to the company details (i.e. Update of nature of business) (click here for
-								an example: xxx)
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div> -->
-
 			<div class="mb-4 rounded-lg bg-blue-200 p-4 text-sm text-blue-900">
 				<div class="mb-2 flex items-center">
 					<div class="mr-2 flex-shrink-0">
@@ -216,24 +146,13 @@
 				class:border-blue-500={dragActive}
 			>
 				<div class="flex flex-col items-center justify-center p-6">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="mb-4 h-16 w-16 text-gray-400"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-						></path></svg
-					>
+					<img src={onboard} alt="Upload" class="mb-4 h-[33px] w-[33px] text-gray-400" />
 					<p class="mb-2 text-gray-500">Click to upload or drag and drop</p>
-					<p class="text-xs text-gray-500">Max. File Size: 30MB</p>
+					<p class="text-[12px] text-xs text-gray-500">Max. File Size: 30MB</p>
 					<div class="mt-4">
 						<Button color="blue">
-							<label class="cursor-pointer">
+							<label class="flex cursor-pointer items-center">
+								<img src={searchIcon} alt="Search" class="mr-2 h-5 w-5" />
 								Browse File
 								<input type="file" class="hidden" on:change={handleFileInput} multiple />
 							</label>

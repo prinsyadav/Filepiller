@@ -45,7 +45,7 @@
 </script>
 
 <div class="relative flex h-screen w-64 flex-col border-r border-gray-200 bg-white">
-	<div class="flex items-center border-gray-200 p-4">
+	<div class="flex items-center p-4">
 		<div class="flex items-center">
 			<img
 				src="/Filepillar_logo2 2.png"
@@ -76,7 +76,9 @@
 		</button>
 	</div>
 
-	<nav class="mt-4 flex-grow text-base font-medium leading-normal tracking-normal text-gray-900">
+	<nav
+		class="mt-4 flex-grow border-b border-gray-500 text-base font-medium leading-normal tracking-normal text-gray-900"
+	>
 		<ul>
 			{#each mainNavItems as item}
 				<li>
