@@ -23,7 +23,7 @@
 		{ href: '/', label: 'Home', icon: 'home', iconSrc: iconMap.home },
 		{
 			href: '/import-documents',
-			label: 'Import Documents',
+			label: 'Onboard',
 			icon: 'onboard',
 			iconSrc: iconMap.onboard
 		},

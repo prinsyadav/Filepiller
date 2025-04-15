@@ -49,7 +49,7 @@
 			<nav aria-label="Breadcrumb">
 				<ol class="flex items-center space-x-2 text-sm text-gray-500">
 					<li class="flex items-center">
-						<a href="/" class="hover:text-blue-600">Onboard</a>
+						<a href="/" class="hover:text-blue-600">Onboarding</a>
 						<span class="mx-2">/</span>
 					</li>
 					<li class="flex items-center">
